@@ -4,9 +4,7 @@
 
 Now that your Codespace/Dev Container and ENV files are configured, it is time to deploy the Azure resources. This is done using a `Makefile`.
 
-To deploy everything run the following command from the C
-
-odespace/Dev Container prompt:
+To deploy everything run the following command from the Codespace/Dev Container prompt:
 
 ```bash
     make deploy
@@ -14,7 +12,6 @@ odespace/Dev Container prompt:
 
 This will deploy the infrastructure and the application code.
 
-*This command can be run as many times as needed in the event you encounter any errors. A set of known issues and their workarounds that we have found can be found in [Known Issues](./docs/knownissues.md)*
 
 ### Additional Information
 
@@ -45,21 +42,7 @@ manual-inf-destroy           A command triggered by a user to destroy a resource
 
 ## Configure authentication and authorization
 
-If you have chosen to enable authentication and authorization for your deployment by setting the environment variable `REQUIRE_WEBSITE_SECURITY_MEMBERSHIP` to `true`, you will need to configure it at this point. Please see [Known Issues](./docs/knownissues.md#error-your-adminstrator-has-configured-the-application-mesjs_web_access_xxxxx-to-block-users) section for guidance on how to configure. 
+If you have chosen to enable authentication and authorization for your deployment by setting the environment variable `REQUIRE_WEBSITE_SECURITY_MEMBERSHIP` to `true`, you will need to configure it at this point.
 
 **NOTICE:** If you haven't enabled this, but your Tenant requires this, you may still need to configure as noted above.
 
-## Find your deployment URL
-
-Once deployed, you can find the URL of your installation by:
-
-1) Browse to your new Resource Group at https://portal.azure.com and locate the "App Service"
-![Location of App Service in Portal](./docs/images/deployment_app_service_location.jpg)
-
-2) After clicking on the App Service, you will see the "Default domain" listed. This is the link to your installation.
-![Default Domain of App Service in Portal](./docs/images/deployment_default_domain.jpg)
-
-
-## Next steps
-
-At this point deployment is complete. Please follow the [instructions for using the MES agent template for the first time](/docs/deployment/using_mes_first_time.md).
